@@ -22,7 +22,7 @@ xpack.security.enabled: true
 # elasticsearch.password: (nimblerocks)_
 
 # If you need to provide a CA certificate for your Elasticsarech instance, put
-# the path of the pem file here
+# the path of the pem file here.
 # ca: /path/to/your/CA.pem
 
 # The default application to load.
