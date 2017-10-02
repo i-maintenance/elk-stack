@@ -11,6 +11,7 @@ services:
       - ./elasticsearch:/usr/share/elasticsearch/data
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    restart: always
 
   logstash:
     build: logstash/
@@ -20,6 +21,7 @@ services:
       - "5000:5000"
     depends_on:
       - elasticsearch
+    restart: always
 
   kibana:
     build: kibana/
@@ -27,3 +29,4 @@ services:
       - "5601:5601"
     depends_on:
       - elasticsearch
+    restart: always
